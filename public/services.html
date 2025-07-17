@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sewing Machine Services</title>
+  <link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+  <header>
+    <h1>Our Premium Services</h1>
+    <p>Expert care, convenient support, and reliable repairs for your sewing needs.</p>
+  </header>
+
+  <div class="services-container">
+
+    <!-- Repair Service -->
+    <div class="service-card" id="repair">
+      <div class="service-content">
+        <h2>🛠️ Repair Service</h2>
+        <p>We provide expert repair services for all types of sewing machines — industrial, domestic, and computerized models. 
+          Our technicians use genuine parts and offer fast turnaround to get your machine up and running in no time.</p>
+        <ul>
+          <li>Fast and affordable repairs</li>
+          <li>Original spare parts</li>
+          <li>Pickup & delivery available</li>
+        </ul>
+        <button onclick="toggleForm('repairForm')">Request Repair</button>
+        <div class="form-container" id="repairForm">
+          <form id="repair-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="issue" placeholder="Describe the issue..." required></textarea>
+            <button type="submit">Submit Repair Request</button>
+          </form>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Virtual Visit -->
+    <div class="service-card" id="virtual-visit">
+
+      <div class="service-content">
+        <h2>💻 Virtual Visit</h2>
+        <p>Book a virtual consultation to speak with our expert from the comfort of your home. 
+          We help with troubleshooting, product guidance, and basic training over a video call!</p>
+        <ul>
+          <li>Live video troubleshooting</li>
+          <li>Guided demos and support</li>
+          <li>Flexible time slots</li>
+        </ul>
+        <button onclick="toggleForm('virtualForm')">Book Virtual Visit</button>
+        <div class="form-container" id="virtualForm">
+          <form id="virtualVisitForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="datetime-local" name="datetime" required>
+            <textarea name="message" placeholder="What would you like help with?" required></textarea>
+            <button type="submit">Book Now</button>
+          </form>
+          
+          
+          
+          <!-- Make sure this script is loaded AFTER the form -->
+          <script src="/service.js" defer></script>
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+<div style="padding: 20px;">
+  <a href="index.html" style="
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  text-decoration: none;
+  background-color: #002d40;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(255, 115, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+"
+onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='translateY(-2px)'"
+onmouseout="this.style.backgroundColor='#002d40'; this.style.transform='translateY(0)'">
+  🏠 Back To Home
+</a>
+
+</div>
+
+  <script src="services.js"></script>
+
+<div id="customModal" class="custom-modal">
+  <div class="custom-modal-content">
+    <span id="closeModal" class="custom-close">&times;</span>
+    <p id="modalText">Repair request submitted successfully!</p>
+  </div>
+</div>
+
+
+
+</body>
+</html>
