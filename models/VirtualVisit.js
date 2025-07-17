@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const virtualVisitSchema = new mongoose.Schema({
+const virtualvisitSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   datetime: { type: Date, required: true },
@@ -8,6 +8,6 @@ const virtualVisitSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-const VirtualVisit = mongoose.model('VirtualVisit', virtualVisitSchema);
+const VirtualVisit = mongoose.model('VirtualVisit', virtualvisitSchema);
 
 module.exports = VirtualVisit;
