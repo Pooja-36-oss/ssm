@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const virtualForm = document.getElementById('virtualVisitForm');
+  const virtualForm = document.getElementById('virtualvisitForm');
   const messageContainer = document.getElementById('messageContainer'); // You must have this in your HTML
   const modal = document.getElementById('customModal');
   const modalText = document.getElementById('modalText');
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => response.json())
       .then(result => {
         if (result.success) {
-          modalText.textContent = "Virtual visit booked successfully!";
+          modalText.textContent = "virtual visit booked successfully!";
           modal.style.display = "block";
 
           messageContainer.innerHTML = '<p class="success">Virtual visit booked successfully!</p>';
