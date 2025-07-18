@@ -1,23 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // ===== Mobile Menu Toggle =====
-  const toggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const dropdowns = document.querySelectorAll(".dropdown");
 
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
-  // ===== Dropdown Toggle on Mobile =====
-  const dropdowns = document.querySelectorAll('.dropdown');
-
-  dropdowns.forEach(drop => {
-    drop.addEventListener('click', function (e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault(); // Prevent anchor link behavior
-        this.classList.toggle('open');
-      }
+    // Toggle mobile menu
+    toggleBtn.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
     });
-  });
+
+    // Dropdown logic for mobile
+    dropdowns.forEach(dropdown => {
+      const link = dropdown.querySelector("a");
+      link.addEventListener("click", function (e) {
+        // Only apply custom behavior for screen width ≤ 768px
+        if (window.innerWidth <= 768) {
+          e.preventDefault(); // prevent navigating to "#services" or "#products"
+          dropdown.classList.toggle("open");
+        }
+      });
+    });
+  });
+
 
   // ===== Arrow Dropdown Logic (Desktop) =====
   const arrows = document.querySelectorAll(".dropdown-arrow");
@@ -126,4 +129,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   }
-});
